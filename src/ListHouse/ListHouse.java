@@ -13,12 +13,13 @@ public class ListHouse {
 
     public int no_of_item;
     public int[] list;
+    private static final int max_list = 5;
     public int size;
     public int position;
 
-    public ListHouse(int item) {
-        no_of_item = 10;
-        list = new int[item];
+    public ListHouse(int max_list) {
+        no_of_item = 0;
+        list = new int[max_list];
     }
 
     public int getNo_of_item() {
@@ -57,34 +58,41 @@ public class ListHouse {
         return no_of_item;
     }
 
-    public int generateList(int a) {
-        
-        for (int i = 1; i == a; i++) {
+    public int generateList(int max_list) {
+
+        for (int i = 1; i <= max_list; i++) {
             list[i] = 2 * 2 + list[i];
             no_of_item++;
             position++;
-            printList(list);
-        }
 
-       return no_of_item;
-       
+        }
+        printList(list);
+        return no_of_item;
+
     }
 
     public void insert(int item) {
-        //for (int i = 1; i == list.length; i++) {
-        //list[no_of_item] = new int(item);
+
         no_of_item++;
         position++;
 
-       // }
+        // }
     }
 
     public void delete() {
-        for (int i = 0; i <= no_of_item; i++) {
+        for (int i = 0; i <= max_list; i++) {
             no_of_item--;
             position--;
         }
 
+    }
+
+    public boolean isEmpty() {
+        if (no_of_item == 5) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void makeEmpty() {
@@ -96,7 +104,7 @@ public class ListHouse {
     }
 
     public void printList(int a[]) {
-        for (int i = 1; i <= no_of_item; i++) {
+        for (int i = 1; i <= max_list; i++) {
             System.out.println(a[i]);
 
         }
@@ -106,9 +114,7 @@ public class ListHouse {
     public static void main(String[] args) {
 
         ListHouse li = new ListHouse(100);
-        li.generateList(10);
-        //li.insert(10);
-       
+        li.generateList(max_list);
 
     }
 }
