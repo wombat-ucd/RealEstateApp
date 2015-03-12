@@ -15,7 +15,7 @@ public class ListHouse {
     public int[] list;
     private static final int max_list = 5;
     public int size;
-    public int position;
+    public int position = 1;
 
     public ListHouse(int max_list) {
         no_of_item = 0;
@@ -61,22 +61,24 @@ public class ListHouse {
     public int generateList(int max_list) {
 
         for (int i = 1; i <= max_list; i++) {
-            list[i] = 2 * 2 + list[i];
+
             no_of_item++;
             position++;
 
         }
-        printList(list);
+
         return no_of_item;
 
     }
 
     public void insert(int item) {
-
+        if ( max_list<30) {
+            list[no_of_item] = item;
+        }
         no_of_item++;
         position++;
 
-        // }
+       
     }
 
     public void delete() {
@@ -103,9 +105,9 @@ public class ListHouse {
         return position;
     }
 
-    public void printList(int a[]) {
+    public void printList() {
         for (int i = 1; i <= max_list; i++) {
-            System.out.println(a[i]);
+            System.out.println(list[i]);
 
         }
 
@@ -113,8 +115,9 @@ public class ListHouse {
 
     public static void main(String[] args) {
 
-        ListHouse li = new ListHouse(100);
+        ListHouse li = new ListHouse(30);
         li.generateList(max_list);
-
+        li.insert(10);
+        li.printList();
     }
 }
