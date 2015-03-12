@@ -35,8 +35,9 @@ public class RealEstate {
         
         label1=new JLabel("         Lot Number          ");
         panel2.add(label1);
-        textfield1=new JTextField("                 ");
+        textfield1=new JTextField();
         panel2.add(textfield1);
+        
          label2=new JLabel("        First Name          ");
         panel2.add(label2);
         textfield2=new JTextField("                 ");
@@ -70,8 +71,8 @@ public class RealEstate {
         
         
         
-    }
-    public void addButton(){
+   // }
+    //public void addButton(){
         panel2.add(panel3);
         panel3.setLayout(new GridLayout());
         
@@ -91,54 +92,70 @@ public class RealEstate {
         panel3.add(btn6);
         
         
-    }
-    public void createActionListenerbtn1(){
+      
+   // public void createActionListenerbtn1(){
         btn1.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
                             RealEstate rs1=new RealEstate();
                             rs1.Reset();
                         }
                         });
-    }
-    public void createActionListenerbtn2(){
+    
+   // public void createActionListenerbtn2(){
         btn2.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
                             RealEstate rs2=new RealEstate();
                             rs2.Add();
                         }
                         });
-    }
-     public void createActionListenerbtn3(){
+    
+    // public void createActionListenerbtn3(){
         btn3.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
-                            RealEstate rs3=new RealEstate();
-                            rs3.Clear();
+                            System.out.println("check");
+//                            RealEstate rs3=new RealEstate();
+//                            rs3.Clear();
+                            textfield1.setText("");
+                            textfield2.setText("");
+                            textfield3.setText("");
+                            textfield4.setText("");
+                            textfield5.setText("");
+                            textfield6.setText("");
+        
+                            
                         }
                         });
-    }
-      public void createActionListenerbtn4(){
+    
+     // public void createActionListenerbtn4(){
         btn4.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
                             RealEstate rs4=new RealEstate();
                             rs4.Next();
                         }
                         });
-    }
-       public void createActionListenerbtn5(){
+    
+      // public void createActionListenerbtn5(){
         btn5.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
                             RealEstate rs5=new RealEstate();
                             rs5.Delete();
                         }
                         });
-    }
-        public void createActionListenerbtn6(){
+    
+        //public void createActionListenerbtn6(){
         btn6.addActionListener(new ActionListener(){
+                        @Override
                         public void actionPerformed(ActionEvent e){
                             RealEstate rs6=new RealEstate();
                             rs6.Find();
                         }
                         });
+    
     }
     public void Reset(){
            
@@ -146,15 +163,16 @@ public class RealEstate {
     public void Add(){
         
     }
-    public void Clear(){
-        textfield1.setText(" ");
-        textfield2.setText(" ");
-        textfield3.setText(" ");
-        textfield4.setText(" ");
-        textfield5.setText(" ");
-        textfield6.setText(" ");
-        
-    }
+//    public void Clear(){
+//       
+//        textfield1.setText("abc");
+//        textfield2.setText("");
+//        textfield3.setText("");
+//        textfield4.setText("");
+//        textfield5.setText("");
+//        textfield6.setText("");
+//        
+//    }
     public void Next(){
         
     }
@@ -170,7 +188,7 @@ public class RealEstate {
 public static void main(String[] args){
     RealEstate re=new RealEstate();
     re.createUserInterface();
-    re.addButton();
+   // re.addButton();
 
 
 }
