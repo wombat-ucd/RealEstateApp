@@ -104,7 +104,8 @@ public class ListHouse {
 
     }
 
-    public int findKth(String item) {
+    public int findKth(int item) {
+        
         return position;
     }
 
@@ -121,8 +122,6 @@ public class ListHouse {
         ListHouse li = new ListHouse(30);
         li.generateList(max_list);
         li.insert(10);
-        
-        
         li.printList();
         System.out.println("----------");
         li.delete(5);

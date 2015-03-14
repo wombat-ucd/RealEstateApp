@@ -106,8 +106,14 @@ public class RealEstate {
         btn2.addActionListener(new ActionListener(){
                         @Override
                         public void actionPerformed(ActionEvent e){
-                            RealEstate rs2=new RealEstate();
-                            rs2.Add();
+//                            RealEstate rs2=new RealEstate();
+//                            rs2.Add();
+                            textfield1.getText();
+        textfield2.getText();
+        textfield3.getText();
+        textfield4.getText();
+        textfield5.getText();
+        textfield6.getText();
                         }
                         });
     
@@ -115,9 +121,7 @@ public class RealEstate {
         btn3.addActionListener(new ActionListener(){
                         @Override
                         public void actionPerformed(ActionEvent e){
-                            System.out.println("check");
-//                            RealEstate rs3=new RealEstate();
-//                            rs3.Clear();
+                            
                             textfield1.setText("");
                             textfield2.setText("");
                             textfield3.setText("");
@@ -161,6 +165,12 @@ public class RealEstate {
            
     }
     public void Add(){
+        textfield1.getText();
+        textfield2.getText();
+        textfield3.getText();
+        textfield4.getText();
+        textfield5.getText();
+        textfield6.getText();
         
     }
 //    public void Clear(){
