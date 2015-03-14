@@ -37,3 +37,13 @@ $RECYCLE.BIN/
 
 # Directories potentially created on remote AFP share
 .AppleDB
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
