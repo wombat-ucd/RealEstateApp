@@ -61,7 +61,7 @@ public class ListHouse {
     public int generateList(int max_list) {
 
         for (int i = 1; i <= max_list; i++) {
-            list[i]=6;
+            list[i] = 6;
             no_of_item++;
             position++;
 
@@ -104,8 +104,23 @@ public class ListHouse {
 
     }
 
-    public int findKth(int item) {
-        
+    public int find(int item) {
+        boolean valueInList = true;
+        for (int i = 0; i < no_of_item; i++) {
+
+            if (list[i] == item) {
+
+                System.out.print(i + " ");
+
+            }
+            if (valueInList != true) {
+                System.out.println("The value not in the list");
+            }
+
+        }
+
+        System.out.println();
+
         return position;
     }
 
@@ -126,5 +141,7 @@ public class ListHouse {
         System.out.println("----------");
         li.delete(5);
         li.printList();
+        System.out.println("----------");
+        li.find(10);
     }
 }
